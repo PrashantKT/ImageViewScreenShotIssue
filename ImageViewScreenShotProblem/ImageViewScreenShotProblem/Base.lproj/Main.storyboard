@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q8v-vU-hbi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9Yx-DG-wIz">
+            <objects>
+                <navigationController id="Q8v-vU-hbi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lZc-kh-B9Q">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SUW-Us-kiB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lga-29-pMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1404" y="-80"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageViewScreenShotProblem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testimg" translatesAutoresizingMaskIntoConstraints="NO" id="KNq-fN-1Je">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6h-bR-2ze">
+                                <rect key="frame" x="121" y="735" width="151" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Take Screenshot"/>
+                                <connections>
+                                    <action selector="btnTakeScreenShot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Soe-Fg-plA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KNq-fN-1Je" secondAttribute="trailing" id="1LQ-17-ahP"/>
+                            <constraint firstItem="z6h-bR-2ze" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WCh-fl-TBP"/>
+                            <constraint firstItem="KNq-fN-1Je" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z78-cs-YGt"/>
+                            <constraint firstItem="KNq-fN-1Je" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aFg-dq-LJC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z6h-bR-2ze" secondAttribute="bottom" constant="48" id="dyG-pw-BhP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KNq-fN-1Je" secondAttribute="bottom" id="x6M-jI-Rv8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FFL-oT-aIY"/>
+                    <connections>
+                        <outlet property="imgView" destination="KNq-fN-1Je" id="Aq7-T9-OS1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-27"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="XDh-3l-LbF">
+            <objects>
+                <viewController storyboardIdentifier="ResultVCViewController" title="Result" id="xyg-Hh-AlQ" customClass="ResultVCViewController" customModule="ImageViewScreenShotProblem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b6H-kJ-T2l">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-oe-ikV">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a2k-z2-Jhi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ced-oe-ikV" firstAttribute="top" secondItem="a2k-z2-Jhi" secondAttribute="top" id="F1L-sI-7zL"/>
+                            <constraint firstItem="Ced-oe-ikV" firstAttribute="leading" secondItem="a2k-z2-Jhi" secondAttribute="leading" id="eGo-jk-NaN"/>
+                            <constraint firstItem="a2k-z2-Jhi" firstAttribute="trailing" secondItem="Ced-oe-ikV" secondAttribute="trailing" id="wwC-od-b4R"/>
+                            <constraint firstItem="a2k-z2-Jhi" firstAttribute="bottom" secondItem="Ced-oe-ikV" secondAttribute="bottom" id="xcP-Jf-SxL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="Ced-oe-ikV" id="olT-sp-sw8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zyr-7k-ECu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="testimg" width="721" height="766"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
